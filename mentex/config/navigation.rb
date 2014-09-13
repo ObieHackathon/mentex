@@ -15,7 +15,7 @@ SimpleNavigation::Configuration.run do |navigation|
 
   # Item keys are normally added to list items as id.
   # This setting turns that off
-   navigation.autogenerate_item_ids = false
+  # navigation.autogenerate_item_ids = false
 
   # You can override the default logic that is used to autogenerate the item ids.
   # To do this, define a Proc which takes the key of the current item as argument.
@@ -53,18 +53,18 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
-    primary.item :key_1, 'Mentex', 'welcome' 
-    primary.dom_class = 'nav'
+    primary.item :key_1, 'Mentex', root_path 
+    primary.dom_class = 'nav nav-pills'
 
     # Add an item which has a sub navigation (same params, but with block)
-    primary.item :key_2, 'Ask an Expert', experts_path do |sub_nav|
+    primary.item :key_2, 'Ask an Expert', experts_path # do |sub_nav|
       # Add an item to the sub navigation (same params again)
-      sub_nav.item :key_2_1, 'Tutorials', tutorials_path 
-    end
+    primary.item :key_3, 'Tutorials', tutorials_path 
+    # end
 
-    primary.item :key_3, 'Customer Success', 'welcome' 
+    primary.item :key_4, 'Customer Success', 'welcome' 
 
-    primary.item :key_4, 'FAQ', 'welcome' 
+    primary.item :key_5, 'FAQ', 'welcome' 
 
     # primary.item :key_5, 'Sign Up', 'welcome', unless: -> { not logged_in? }
 
