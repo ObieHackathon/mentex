@@ -7,10 +7,11 @@
 <div class="col-md-6">
 <div id = "chatbox">
    <script src="http://thejakeharding.com/ghostwriter/releases/latest/ghostwriter.js"></script>
-   <textarea rows='4' cols='50' class="haunt-me" >
+   <textarea rows='10' cols='50' class="haunt-me" >
    </textarea><br> 
    <div class="search">
-	<input type="text" class="user-in">
+	<textarea rows='2' cols='50' class="user-in">
+	</textarea>
 	<button type="button" id="bla">Send</button>
    </div>
 </div>
@@ -40,32 +41,34 @@
            input: '.haunt-me'
            , interval: 50
            , manuscript: [
-           'How do I refund a transaction with Square?\n'
+           'Hello, what point of service or cashier app do you use?\n'
 	]});
        
 	var haunt1 = ghostwriter.haunt({
            input: '.haunt-me'
            , interval: 100
            , manuscript: [
-           'Hi thanks for your question\nDo you know how to sign in to your online Square dashboard?\n',
+		'Give me a sec...\nOK there\'s an app you can download for clovercalled Reporting. Do you know how to get to the Clover App Store?\n'
             ]});
         
 	var haunt2 = ghostwriter.haunt({
        	     input: '.haunt-me'
              , interval: 50
              , manuscript: [
-             'Yes!\n']});
+             'It\'s here: www.clover.com/appmarket/apps/8JF5V99HE1SVG\n']});
              
         var haunt3 = ghostwriter.haunt({
        	     input: '.haunt-me'
              , interval: 100
              , manuscript: [
-             'Ok cool, go to the transactions tab and press Issue Refund.\n'
+             'No problem :)'
               ]});
 	
     $("#bla").click(function(){ 
-         if(count === 0) {haunt0.start();haunt0.stop();haunt1.start();}
-         if(count === 1) {haunt2.start();haunt2.stop();haunt3.start();}
+         if(count === 0) {haunt0.start();}
+         if(count === 1) {haunt1.start();}
+         if(count === 2) {haunt2.start();}
+         if(count === 3) {haunt3.start();}
          var copy = ghostwriter.haunt({
            input: '.user-in', manuscript:[ghostwriter.selectAll,ghostwriter.backspace]});
          increment();
