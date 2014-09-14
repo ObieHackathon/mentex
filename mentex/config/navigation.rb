@@ -62,9 +62,9 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :key_3, 'Tutorials', tutorials_path 
     # end
 
-    primary.item :key_4, 'Customer Success', 'welcome' 
+    primary.item :key_4, 'Customer Success', root_path 
 
-    primary.item :key_5, 'FAQ', 'welcome' 
+    primary.item :key_5, 'FAQ',  root_path
 
     # primary.item :key_5, 'Sign Up', 'welcome', unless: -> { not logged_in? }
 
