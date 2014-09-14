@@ -3,10 +3,12 @@ $asset-path:"/assets";
 
 .force-white  {
 	background-color: white !important;
-	color: #333333 !important;
+	color: #666666 !important;
 }
 body {
-	color: #333333 !important;
+	color: #666666 !important;
+	font-style: italic;
+	font-family: Calibri, sans serif !important;
 }
 
 .force-blue {
@@ -45,20 +47,33 @@ body {
 
 
 .force-gray {
-	color: #333333 !important;
+	color: #666666 !important;
 	text-align: center;
 }
 
 h1.pull-left {
+	margin-left: 15%;
 	width: 100%;
 	text-align: left;
+	font-size:60px;
 }
 
 .whitespace {
 	margin-top: 5%;
 }
+
+#q {
+	width: 70%;
+	line-height: 35px;
+}
+
 input[type="submit"] {
+background: transparent;
 background-image: url(#{$asset_path}/ask.svg) !important;
 background-repeat: no-repeat;
 height: 65px;
+border: none;
+color: transparent;
+text-align: right;
+margin-top: 5%;
 }
