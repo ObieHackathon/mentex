@@ -1,7 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <div id = "chatbox">
-   <input type="text"> 
+   <script src="http://thejakeharding.com/ghostwriter/releases/latest/ghostwriter.js"></script>
+   <input class = "haunt-me" type="text">
+    <script>
+       var haunt = ghostwriter.haunt({
+        input: '.haunt-me'
+      , interval: 100
+      , manuscript: [
+          'hi I have a question',
+           ghostwriter.enter,
+           'Here is your answer'
+        ]
+      });
+     haunt.start();
+    </script>
 </div>
 
 <div id = "info">
