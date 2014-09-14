@@ -1,3 +1,15 @@
-.force-white {
-	background: white;
+.force-white  {
+	background-color: white !important;
+	color: #333333 !important;
+}
+body {
+	color: #333333 !important;
+}
+.force-blue {
+	background-color: #06BEE8 !important;
+	color: white !important;
+}
+
+h1.force-gray {
+	color: #333333 !important;
 }

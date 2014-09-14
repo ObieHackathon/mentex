@@ -54,7 +54,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
     primary.item :key_1, 'Mentex', root_path 
-    primary.dom_class = 'nav nav-pills'
+    primary.dom_class = 'nav nav-pills force-blue'
 
     # Add an item which has a sub navigation (same params, but with block)
     primary.item :key_2, 'Ask an Expert', experts_path # do |sub_nav|
@@ -62,9 +62,9 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :key_3, 'Tutorials', tutorials_path 
     # end
 
-    primary.item :key_4, 'Customer Success', root_path 
+    primary.item :key_4, 'Customer Success',  'tutorials#edit#1'
 
-    primary.item :key_5, 'FAQ',  root_path
+    primary.item :key_5, 'FAQ',  'tutorials#show#1'
 
     # primary.item :key_5, 'Sign Up', 'welcome', unless: -> { not logged_in? }
 
@@ -77,7 +77,7 @@ SimpleNavigation::Configuration.run do |navigation|
 
     # you can also specify html attributes to attach to this particular level
     # works for all levels of the menu
-    # primary.dom_attributes = {id: 'menu-id', class: 'menu-class'}
+    primary.dom_attributes = {class: 'navbar-item'}
 
     # You can turn off auto highlighting for a specific level
     # primary.auto_highlight = false
