@@ -21,7 +21,21 @@ nav {
 		background-image: url(#{$asset_path}/ask-an-expert.svg) !important;
 
 }
-h1.force-gray {
+.force-gray {
 	color: #333333 !important;
+	text-align: center;
 }
 
+h1.pull-left {
+	width: 100%;
+	text-align: left;
+}
+
+.whitespace {
+	margin-top: 5%;
+}
+input[type="submit"] {
+background-image: url(#{$asset_path}/ask.svg) !important;
+background-repeat: no-repeat;
+height: 65px;
+}

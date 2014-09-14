@@ -1,7 +1,9 @@
 <!-- Nav bar -->
+<div id="content" class="whitespace"> </div>
 <div class="container force-white">
-<h1 class="force-gray">Hello! Got a question about your business?</h1>
-<%= form_tag("/experts/1", method: "get", class: "force") do %>
+<h1 class="force-gray pull-left">Hello!</h1>
+<h1 class="force-gray">Got a question about your business?</h1>
+<%= form_tag("/experts/1", method: "get", class: "force-gray") do %>
 <%= text_field_tag(:q) %>
 <%= submit_tag("Submit Question") %>
 <% end %>
