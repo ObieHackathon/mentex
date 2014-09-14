@@ -17,13 +17,3 @@
 @import "bootstrap-sprockets"
 @import "bootstrap-min"
 @import "globals"
-
-.navlist{
-   display: blok;
-   color :#06bee8;
-   height : 100px ; 
-   width : 100%;
-}
-
-
-

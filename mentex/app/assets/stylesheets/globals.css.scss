@@ -5,11 +5,14 @@
 body {
 	color: #333333 !important;
 }
-.force-blue {
+nav {
 	background-color: #06BEE8 !important;
 	color: white !important;
 }
+#ask{
+	background-image: url(<%=asset_path 'ask-an-expert.svg' %>);
 
+}
 h1.force-gray {
 	color: #333333 !important;
 }
