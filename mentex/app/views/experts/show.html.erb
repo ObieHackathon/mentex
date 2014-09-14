@@ -4,20 +4,40 @@
    <script src="http://thejakeharding.com/ghostwriter/releases/latest/ghostwriter.js"></script>
    <textarea rows='4' cols='50' class="haunt-me" >
    </textarea> 
+   <input type="text" class="user-in">
    <button type="button" id="bla">Send</button>
    <script>
-       var haunt = ghostwriter.haunt({
-        input: '.haunt-me'
-      , interval: 100
-      , manuscript: [
-          'Hi thanks for your question\n
-	   Do you know how to sign in to your online Square dashboard?\n',
-           'Ok cool, go to the transactions tab and press Issue Refund.\n',
-        ]
-      });
+      var count =0;
+      var increment =function(){
+         count +=1;
+      };
+   </script>
+   <script>
+       var haunt1 = ghostwriter.haunt({
+           input: '.haunt-me'
+           , interval: 100
+           , manuscript: [
+           'Hi thanks for your question\nDo you know how to sign in to your online Square dashboard?\n',
+            ]});
+             
+        var haunt2 = ghostwriter.haunt({
+       	     input: '.haunt-me'
+             , interval: 100
+             , manuscript: [
+             'Ok cool, go to the transactions tab and press Issue Refund.\n'
+              ]});
 	
     $("#bla").click(function(){ 
-        haunt.start() });
+         if(count === 0) {haunt1.start();}
+         if(count === 1) {haunt2.start();}
+         var copy = ghostwriter.haunt({
+           input: '.user-in', manuscript:[ghostwriter.selectAll]});
+         var write = ghostwriter.haunt({
+           input: '.haunt-me', manuscript:copy}); 
+         increment();
+         copy.start();
+         write.start();
+     });
     </script>
 </div>
 
