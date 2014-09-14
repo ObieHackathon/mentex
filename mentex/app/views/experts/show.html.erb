@@ -2,7 +2,7 @@
 
 <div id = "chatbox">
    <script src="http://thejakeharding.com/ghostwriter/releases/latest/ghostwriter.js"></script>
-   <textarea rows='4' cols='10' class="haunt-me" >
+   <textarea rows='4' cols='50' class="haunt-me" >
    </textarea> 
    <script>
        var haunt = ghostwriter.haunt({
@@ -26,7 +26,7 @@
 
 <p>
   <strong>Imgfile:</strong>
-  <%= @expert.imgfile %>
+  <%=image_tag @expert.imgfile%>
 </p>
 
 <p>
