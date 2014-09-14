@@ -41,10 +41,10 @@ a:hover{
 #key_1{
         background-image: url(#{$asset_path}/logo-01.png) !important; 
 	width:180px;
-        background-size: contain;
 	background-repeat: no-repeat;
 	margin-left:20px;
 	margin-top:3px;
+	padding-right: 20px;
 }
 
 #key_2.active{
@@ -98,7 +98,11 @@ h1.pull-left {
 	margin-left: 15%;
 	width: 100%;
 	text-align: left;
-	font-size:60px;
+	font-size:80px;
+}
+
+h2{
+	font-size:70px;
 }
 
 .whitespace {
@@ -115,6 +119,7 @@ background: transparent;
 background-image: url(#{$asset_path}/ask.svg) !important;
 background-repeat: no-repeat;
 height: 65px;
+width: 150px;
 border: none;
 color: transparent;
 text-align: right;
@@ -134,10 +139,3 @@ margin-top: 5%;
 	text-indent: -9999px;
 }
 
-.search{
-	background-image: url(#{$asset_path}/search-bar-01.png) !important;
-	background-repeat: no-repeat;
-	text-indent: -9999px;
-	width: 500px;
-	height: auto !important;
-}
