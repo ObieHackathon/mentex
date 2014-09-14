@@ -8,19 +8,42 @@ $asset-path:"/assets";
 body {
 	color: #333333 !important;
 }
-nav {
+
+.force-blue {
 	background-color: #06BEE8 !important;
 	color: white !important;
+	height: auto;
+	width: 100%;
 }
 
-.nav a{
-   
+.force-blue a{
+	display: block;
+	float: left;
+	height:70px;
+	text-indent: -9999px;   
+}
+#key_1{
+        background-image: url(#{$asset_path}/logo.svg) !important; 
+        background-repeat: no-repeat;
 }
 
-#ask{
-		background-image: url(#{$asset_path}/ask-an-expert.svg) !important;
+#key_2{
+        background-image: url(#{$asset_path}/ask-an-expert.svg) !important; 
+        background-repeat: no-repeat;
+}
+
+#key_3{
+        background-image: url(#{$asset_path}/tutorials.svg) !important; 
+        BACKGROUND-REPEAT: NO-REPEAT;
 
 }
+
+#key_5{
+        background-image: url(#{$asset_path}/pop-questions.svg) !important; 
+        background-repeat: no-repeat;
+}
+
+
 h1.force-gray {
 	color: #333333 !important;
 }
