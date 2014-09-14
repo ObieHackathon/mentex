@@ -7,7 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render_navigation(:expand_all => true) %>
+<div class="nav">
+  <nav>
+    <ul class="navlist">
+     <li><%= link_to "Home", 'welcome#index' %></li>
+     <li><%= link_to "Ask Q", 'welcome#index' %></li> 
+     <li><%= link_to "Tutorials", 'tutorials#index' %></li>
+     <li><%= link_to "FAQ", 'welcome#index' %></li>
+    </ul>
+   </nav>
+</div>
+<% render_navigation(:expand_all => true) %>
 <%= yield %>
 
 </body>

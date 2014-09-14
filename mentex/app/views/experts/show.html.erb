@@ -13,14 +13,27 @@
       };
    </script>
    <script>
-       var haunt1 = ghostwriter.haunt({
+       var haunt0 = ghostwriter.haunt({
+           input: '.haunt-me'
+           , interval: 50
+           , manuscript: [
+           'How do I refund a transaction with Square?\n'
+	]});
+       
+	var haunt1 = ghostwriter.haunt({
            input: '.haunt-me'
            , interval: 100
            , manuscript: [
            'Hi thanks for your question\nDo you know how to sign in to your online Square dashboard?\n',
             ]});
+        
+	var haunt2 = ghostwriter.haunt({
+       	     input: '.haunt-me'
+             , interval: 50
+             , manuscript: [
+             'Yes!\n']});
              
-        var haunt2 = ghostwriter.haunt({
+        var haunt3 = ghostwriter.haunt({
        	     input: '.haunt-me'
              , interval: 100
              , manuscript: [
@@ -28,15 +41,12 @@
               ]});
 	
     $("#bla").click(function(){ 
-         if(count === 0) {haunt1.start();}
-         if(count === 1) {haunt2.start();}
+         if(count === 0) {haunt0.start();haunt0.stop();haunt1.start();}
+         if(count === 1) {haunt2.start();haunt2.stop();haunt3.start();}
          var copy = ghostwriter.haunt({
-           input: '.user-in', manuscript:[ghostwriter.selectAll]});
-         var write = ghostwriter.haunt({
-           input: '.haunt-me', manuscript:copy}); 
+           input: '.user-in', manuscript:[ghostwriter.selectAll,ghostwriter.backspace]});
          increment();
          copy.start();
-         write.start();
      });
     </script>
 </div>

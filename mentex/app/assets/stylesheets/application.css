@@ -17,3 +17,12 @@
 @import "bootstrap-sprockets"
 @import "bootstrap-min"
 @import "globals"
+
+.nav{
+   color= #06bee8;
+   height = 25%; 
+   width = 100%;
+}
+
+
+
