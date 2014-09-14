@@ -13,8 +13,9 @@
 </div>
 <div class="col-md-8">
 <% @tutorials.each do |tutorial| %>
-        <%= tutorial.title %>
-        <%= link_to 'Show', tutorial %><br>
+        <%= link_to(tutorial) do %>
+	<%= tutorial.title %> <br>
+	<% end %>
 	Rating: o o o o o
     <% end %>
 </div>
@@ -24,5 +25,4 @@
 </div>
 <br>
 
-<%= link_to 'New Tutorial', new_tutorial_path %>
 </div>
