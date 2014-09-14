@@ -2,7 +2,9 @@
 
 <div class="container force-white">
 <h1>Hello! Got a question about your business?</h1>
-<%= form_tag do %>
+<%= form_tag("/experts/1", method: "get") do %>
+<%= text_field_tag(:q) %>
+<%= submit_tag("Submit Question") %>
 <input type="text" autocomplete="true" placeholder="How do I use Square?"> </input><br>
 <input type="submit" value="Submit">
 <% end %>
