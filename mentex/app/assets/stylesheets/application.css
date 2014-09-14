@@ -18,10 +18,11 @@
 @import "bootstrap-min"
 @import "globals"
 
-.nav{
-   color= #06bee8;
-   height = 25%; 
-   width = 100%;
+.navlist{
+   display: blok;
+   color :#06bee8;
+   height : 100px ; 
+   width : 100%;
 }
 
 
