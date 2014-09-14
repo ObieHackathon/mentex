@@ -2,15 +2,16 @@
 
 <div id = "chatbox">
    <script src="http://thejakeharding.com/ghostwriter/releases/latest/ghostwriter.js"></script>
-   <input class = "haunt-me" type="text">
-    <script>
+   <textarea rows='4' cols='10' class="haunt-me" >
+   </textarea> 
+   <script>
        var haunt = ghostwriter.haunt({
         input: '.haunt-me'
       , interval: 100
       , manuscript: [
           'hi I have a question',
            ghostwriter.enter,
-           'Here is your answer'
+           '\nHere is your answer'
         ]
       });
      haunt.start();
