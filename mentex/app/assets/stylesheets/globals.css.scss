@@ -39,7 +39,7 @@ a:hover{
 }
 
 #key_1{
-        background-image: url(#{$asset_path}/logo.svg) !important; 
+        background-image: url(#{$asset_path}/logo-01.png) !important; 
 	width:180px;
         background-size: contain;
 	background-repeat: no-repeat;
@@ -119,4 +119,25 @@ border: none;
 color: transparent;
 text-align: right;
 margin-top: 5%;
+}
+
+
+
+
+
+#bla{
+	background: transparent;
+	border: none;
+	background-image: url(#{$asset_path}/submit-01.png) !important;
+	background-repeat: no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+}
+
+.search{
+	background-image: url(#{$asset_path}/search-bar-01.png) !important;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	width: 500px;
+	height: auto !important;
 }
