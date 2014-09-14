@@ -4,17 +4,20 @@
    <script src="http://thejakeharding.com/ghostwriter/releases/latest/ghostwriter.js"></script>
    <textarea rows='4' cols='50' class="haunt-me" >
    </textarea> 
+   <button type="button" id="bla">Send</button>
    <script>
        var haunt = ghostwriter.haunt({
         input: '.haunt-me'
       , interval: 100
       , manuscript: [
-          'hi I have a question',
-           ghostwriter.enter,
-           '\nHere is your answer'
+          'Hi thanks for your question\n
+	   Do you know how to sign in to your online Square dashboard?\n',
+           'Ok cool, go to the transactions tab and press Issue Refund.\n',
         ]
       });
-     haunt.start();
+	
+    $("#bla").click(function(){ 
+        haunt.start() });
     </script>
 </div>
 
