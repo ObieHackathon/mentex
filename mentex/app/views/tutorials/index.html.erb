@@ -8,21 +8,25 @@
 <div class="col-md-4">
 <a>by Something Else</a></div>
 </div> 
+<% @tutorials.each do |tutorial| %>
 <div class="row">
 <div class="col-md-2">
+<<<<<<< HEAD
 	<%= image_tag('clover.png') %>
+=======
+<%= image_tag("squarw-01.png") %>
+>>>>>>> FETCH_HEAD
 </div>
 <div class="col-md-8">
-<% @tutorials.each do |tutorial| %>
         <%= link_to(tutorial) do %>
 	<%= tutorial.title %> <br>
 	<% end %>
 	Rating: o o o o o
-    <% end %>
 </div>
 <div class="col-md-2">
 <a>By Meg Sivad
 </div>
+    <% end %>
 </div>
 <br>
 
