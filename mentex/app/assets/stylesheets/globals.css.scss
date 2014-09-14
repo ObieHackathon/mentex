@@ -16,35 +16,74 @@ body {
 	color: white !important;
 	height: auto;
 	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .force-blue a{
 	display: block;
-	float: left;
-	height:70px;
-	text-indent: -9999px;   
+	height:50px;
+	text-indent: -9999px;
+	padding-right: 15px;   
 }
-#key_1{
-        background-image: url(#{$asset_path}/logo.svg) !important; 
-        background-repeat: no-repeat;
+a.active{
+	visibility: hidden;
 }
 
+a:hover{
+	opacity: 0.3 !important;
+}
+
+#key_1{
+        background-image: url(#{$asset_path}/logo.svg) !important; 
+	width:180px;
+        background-size: contain;
+	background-repeat: no-repeat;
+	margin-left:20px;
+	margin-top:3px;
+}
+
+#key_2.active{
+	background : clear !important;
+        background-image: url(#{$asset_path}/ask-an-expert-sel.svg) !important; 
+        background-size: contain;
+	background-repeat: no-repeat;
+}
 #key_2{
-        background-image: url(#{$asset_path}/ask-an-expert.svg) !important; 
+        background-image: url(#{$asset_path}/ask-ex-01.png) !important; 
+        background-size: contain;
         background-repeat: no-repeat;
+	width:180px;
 }
 
 #key_3{
-        background-image: url(#{$asset_path}/tutorials.svg) !important; 
+        background-image: url(#{$asset_path}/tutorials-01.png) !important; 
+        background-size: contain;
         BACKGROUND-REPEAT: NO-REPEAT;
+	width: 120px;
 
 }
 
+#key_3.active{
+	background : clear !important;
+        background-image: url(#{$asset_path}/tutorial-sel.svg) !important; 
+        background-size: contain;
+	background-repeat: no-repeat;
+
+}
 #key_5{
-        background-image: url(#{$asset_path}/pop-questions.svg) !important; 
+        background-image: url(#{$asset_path}/pop-q-01.png) !important; 
+        background-size: contain;
         background-repeat: no-repeat;
+	width:200px;
 }
 
+#key_5.active{
+	background : clear !important;
+        background-image: url(#{$asset_path}/pop-questions-sel.svg) !important; 
+        background-size: contain;
+	background-repeat: no-repeat;
+}
 
 .force-gray {
 	color: #666666 !important;

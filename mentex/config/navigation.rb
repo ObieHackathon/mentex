@@ -62,7 +62,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :key_3, 'Tutorials', tutorials_path 
     # end
 
-    primary.item :key_4, 'Customer Success',  'tutorials#edit#1'
+    #primary.item :key_4, 'Customer Success',  'tutorials#edit#1'
 
     primary.item :key_5, 'FAQ',  'tutorials#show#1'
 
