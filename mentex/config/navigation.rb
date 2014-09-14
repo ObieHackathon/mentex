@@ -57,14 +57,14 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.dom_class = 'nav nav-pills force-blue'
 
     # Add an item which has a sub navigation (same params, but with block)
-    primary.item :key_2, 'Ask an Expert', experts_path # do |sub_nav|
+    primary.item :key_2, 'Ask an Expert', expert_path(1) # do |sub_nav|
       # Add an item to the sub navigation (same params again)
     primary.item :key_3, 'Tutorials', tutorials_path 
     # end
 
     #primary.item :key_4, 'Customer Success',  'tutorials#edit#1'
 
-    primary.item :key_5, 'FAQ',  'tutorials#show#1'
+    primary.item :key_5, 'FAQ',  tutorial_path(1)
 
     # primary.item :key_5, 'Sign Up', 'welcome', unless: -> { not logged_in? }
 
