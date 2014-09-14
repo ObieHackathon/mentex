@@ -1,11 +1,32 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
+<div class="page-header">
+<h1>How do I use Square?</h1>
+</div>
+<div class="row">
+<div class="col-md-6">
 <div id = "chatbox">
    <script src="http://thejakeharding.com/ghostwriter/releases/latest/ghostwriter.js"></script>
    <textarea rows='4' cols='50' class="haunt-me" >
-   </textarea> 
+   </textarea><br> 
    <input type="text" class="user-in">
    <button type="button" id="bla">Send</button>
+</div>
+</div>
+<div class="col-md-2">
+  <%=image_tag @expert.imgfile%>
+</div>
+<div class="col-md-4">
+
+<div id = "info">
+  <a><%= @expert.name %></a> <br>
+  <a><% for i in 0..@expert.rating %>
+    <%= raw "o " %>
+  <% end %> </a> <br>
+   <a>Local Expert</a>
+</div>
+</div>
+</div>
    <script>
       var count =0;
       var increment =function(){
@@ -49,24 +70,3 @@
          copy.start();
      });
     </script>
-</div>
-
-<div id = "info">
-<p>
-  <strong>Name:</strong>
-  <%= @expert.name %>
-</p>
-
-<p>
-  <strong>Imgfile:</strong>
-  <%=image_tag @expert.imgfile%>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @expert.rating %>
-</p>
-</div>
-
-<% link_to 'Edit', edit_expert_path(@expert) %> |
-<% link_to 'Back', experts_path %>
